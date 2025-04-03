@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -379,6 +380,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #1a1a1a;
+  font-feature-settings: "palt";
 }
 
 a {
@@ -637,5 +639,93 @@ img {
   .c-sns-list__item {
     width: 60px;
     height: 60px;
+  }
+}
+
+/*  ==============================
+* 見出し(横線と下に日本語)
+============================== */
+.c-headingL-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 255px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media screen and (width > 768px) {
+  .c-headingL-wrapper {
+    width: 500px;
+    gap: 14px;
+  }
+}
+
+.c-headingL {
+  font-family: "Oleo Script Swash Caps", system-ui;
+  font-size: 1.875rem;
+  letter-spacing: 0.05em;
+  padding-left: 0.05em;
+  line-height: 1;
+  color: #4a311c;
+  display: flex;
+  align-items: center;
+}
+@media screen and (width > 768px) {
+  .c-headingL {
+    font-size: 3.75rem;
+    letter-spacing: 0.05em;
+  }
+}
+.c-headingL__sub {
+  font-size: 0.625rem;
+  line-height: 1;
+  color: #4a311c;
+}
+@media screen and (width > 768px) {
+  .c-headingL__sub {
+    font-size: 0.875rem;
+  }
+}
+.c-headingL::before, .c-headingL::after {
+  content: "";
+  display: block;
+  width: 800px;
+  height: 1px;
+  background-color: #4a311c;
+}
+.c-headingL::before {
+  margin-right: 13px;
+}
+@media screen and (width > 768px) {
+  .c-headingL::before {
+    margin-right: 15px;
+  }
+}
+.c-headingL::after {
+  margin-left: 13px;
+}
+@media screen and (width > 768px) {
+  .c-headingL::after {
+    margin-left: 15px;
+  }
+}
+
+/*  ==============================
+* 見出し(英字のみ)
+============================== */
+.c-heading-subpage {
+  font-family: "Oleo Script Swash Caps", system-ui;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  padding-left: 0.1em;
+  line-height: 1;
+  color: #4a311c;
+}
+@media screen and (width > 768px) {
+  .c-heading-subpage {
+    font-size: 3.75rem;
+    letter-spacing: 0.05em;
+    padding-left: 0.05em;
   }
 }/*# sourceMappingURL=style.css.map */

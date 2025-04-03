@@ -1,0 +1,80 @@
+@use "../../global" as *;
+
+/*  ==============================
+* 見出し(横線と下に日本語)
+============================== */
+.c-headingL-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 255px;
+    margin: 0 auto;
+    overflow: hidden;
+    @include media {
+        width: 500px;
+        gap: 14px;
+    }
+}
+
+.c-headingL {
+    font-family: $f_script;
+    @include rem(30);
+    letter-spacing: 0.05em;
+    padding-left: 0.05em;
+    line-height: 1;
+    color: $c_main2;
+    display: flex;
+    align-items: center;
+    @include media {
+        @include rem(60);
+        letter-spacing: 0.05em;
+    }
+
+    &__sub {
+        @include rem(10);
+        line-height: 1;
+        color: $c_main2;
+        @include media {
+            @include rem(14);
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 800px;
+        height: 1px;
+        background-color: $c_main2;
+    }
+    &::before {
+        margin-right: 13px;
+        @include media {
+            margin-right: 15px;
+        }
+    }
+    &::after {
+        margin-left: 13px;
+        @include media {
+            margin-left: 15px;
+        }
+    }
+}
+
+/*  ==============================
+* 見出し(英字のみ)
+============================== */
+.c-heading-subpage {
+    font-family: $f_script;
+    @include rem(32);
+    letter-spacing: 0.1em;
+    padding-left: 0.1em;
+    line-height: 1;
+    color: $c_main2;
+    @include media {
+        @include rem(60);
+        letter-spacing: 0.05em;
+        padding-left: 0.05em;
+    }
+}
