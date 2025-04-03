@@ -1,0 +1,18 @@
+@use "../../global" as *;
+
+.c-sns-list {
+    display: flex;
+    gap: 16px;
+    @include media {
+        gap: 40px;
+    }
+
+    &__item {
+        width: 40px;
+        height: 40px;
+        @include media {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}

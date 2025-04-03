@@ -394,18 +394,21 @@ img {
   width: 100%;
   max-width: 1332px;
   padding: 0 16px;
+  margin: 0 auto;
 }
 
 .l-containerM {
   width: 100%;
   max-width: 992px;
   padding: 0 16px;
+  margin: 0 auto;
 }
 
 .l-containerS {
   width: 100%;
   max-width: 752px;
   padding: 0 16px;
+  margin: 0 auto;
 }
 
 .l-header {
@@ -552,6 +555,53 @@ img {
   top: calc(50% + 7px);
 }
 
+.l-footer {
+  background-color: #6f4a2a;
+  padding: 32px 0 18px;
+}
+.l-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+@media screen and (width > 768px) {
+  .l-footer__inner {
+    gap: 48px;
+  }
+}
+.l-footer__list {
+  color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.75rem;
+  font-family: "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+@media screen and (width > 768px) {
+  .l-footer__list {
+    flex-direction: row;
+    font-size: 1rem;
+    gap: 32px;
+  }
+}
+.l-footer__copyright {
+  display: block;
+  color: #ebebeb;
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+}
+@media screen and (width > 768px) {
+  .l-footer__copyright {
+    margin-top: 48px;
+    font-size: 1rem;
+  }
+}
+
 .c-logo {
   font-family: "Raleway", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-weight: 600;
@@ -567,5 +617,25 @@ img {
 @media screen and (width > 768px) {
   .c-logo--small {
     font-size: 1.875rem;
+  }
+}
+
+.c-sns-list {
+  display: flex;
+  gap: 16px;
+}
+@media screen and (width > 768px) {
+  .c-sns-list {
+    gap: 40px;
+  }
+}
+.c-sns-list__item {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (width > 768px) {
+  .c-sns-list__item {
+    width: 60px;
+    height: 60px;
   }
 }/*# sourceMappingURL=style.css.map */
