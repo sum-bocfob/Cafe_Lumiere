@@ -1,0 +1,26 @@
+// ブレイクポイント
+$breakpoints: (
+    "tab": "425px",
+    "pc": "768px",
+);
+
+@mixin media($breakpoint: "pc") {
+    @media screen and (width > #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}
+
+// font-size rem
+@mixin rem($fontSize) {
+    font-size: calc($fontSize / 16 * 1rem);
+}
+
+// z-index
+$z: (
+    "header": 500,
+    "gnav": 1000,
+    "menu-btn": 1500,
+);
+@mixin z-index($name) {
+    z-index: #{map-get($z, $name)};
+}

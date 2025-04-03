@@ -1,8 +1,9 @@
 CSS設計 - FLOCSS
 Sass
+destyles
 
 Layout:
-  ☐ ヘッダー(max 1300px) ホバーアニメーション
+  ✔ ヘッダー(max 1300px) ホバーアニメーション @done(25-04-03 21:56)
   ☐ フッター
 
 Project:
