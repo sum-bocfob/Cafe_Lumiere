@@ -588,6 +588,12 @@ img {
     gap: 32px;
   }
 }
+.l-footer__item {
+  transition-duration: 0.6s;
+}
+.l-footer__item:hover {
+  opacity: 0.6;
+}
 .l-footer__copyright {
   display: block;
   color: #ebebeb;
@@ -609,6 +615,7 @@ img {
   font-weight: 600;
   font-style: italic;
   color: #ebebeb;
+  transition-duration: 0.6s;
 }
 .c-logo--big {
   font-size: 2rem;
@@ -620,6 +627,9 @@ img {
   .c-logo--small {
     font-size: 1.875rem;
   }
+}
+.c-logo:hover {
+  opacity: 0.6;
 }
 
 .c-sns-list {
@@ -728,4 +738,35 @@ img {
     letter-spacing: 0.05em;
     padding-left: 0.05em;
   }
+}
+
+.c-next-btn__link {
+  font-size: 1.125rem;
+  font-family: "Oleo Script Swash Caps", system-ui;
+  color: #4a311c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (width > 768px) {
+  .c-next-btn__link {
+    font-size: 2.25rem;
+  }
+}
+.c-next-btn__link:hover .c-next-btn__icon {
+  translate: 5px 0;
+}
+.c-next-btn__icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition-duration: 0.6s;
+}
+@media screen and (width > 768px) {
+  .c-next-btn__icon {
+    font-size: 3rem;
+  }
+}
+
+.u-upper-case {
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

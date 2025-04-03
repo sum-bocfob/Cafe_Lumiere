@@ -1,0 +1,30 @@
+@use "../../global" as *;
+
+.c-next-btn {
+    &__link {
+        @include rem(18);
+        font-family: $f_script;
+        color: $c_main2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        @include media {
+            @include rem(36);
+        }
+
+        &:hover {
+            .c-next-btn__icon {
+                translate: 5px 0;
+            }
+        }
+    }
+
+    &__icon {
+        @include rem(24);
+        font-weight: bold;
+        transition-duration: $dur_def;
+        @include media {
+            @include rem(48);
+        }
+    }
+}

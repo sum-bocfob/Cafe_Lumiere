@@ -29,6 +29,13 @@
         }
     }
 
+    &__item {
+        transition-duration: $dur_def;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
     &__copyright {
         display: block;
         color: $c_white;

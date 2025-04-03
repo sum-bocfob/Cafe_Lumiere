@@ -5,6 +5,7 @@
     font-weight: 600;
     font-style: italic;
     color: $c_white;
+    transition-duration: $dur_def;
 
     &--big {
         @include rem(32);
@@ -14,5 +15,9 @@
         @include media {
             @include rem(30);
         }
+    }
+
+    &:hover {
+        opacity: 0.6;
     }
 }
