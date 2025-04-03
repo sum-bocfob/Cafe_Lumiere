@@ -1,5 +1,8 @@
 @use "../../global" as *;
 
+/*  ==============================
+* 矢印アイコン付きボタン
+============================== */
 .c-next-btn {
     &__link {
         @include rem(18);
@@ -26,5 +29,54 @@
         @include media {
             @include rem(48);
         }
+    }
+}
+
+/*  ==============================
+* ラウンドボタン
+============================== */
+.c-round-btn-wrapper {
+    width: 54.93333333333333vw;
+    margin: 0 auto;
+    max-width: 378px;
+}
+.c-round-btn {
+    display: grid;
+    place-content: center;
+    background-color: $c_bg2;
+    @include rem(16);
+    letter-spacing: 0.1em;
+    padding: 12px 42px;
+    border-radius: 100px;
+    box-shadow: 0 3px 0 0 $c_shadow;
+    color: $c_main2;
+    @include media {
+        @include rem(24);
+        letter-spacing: 0.1em;
+    }
+}
+
+/*  ==============================
+* 確定 / キャンセル ボタン
+============================== */
+.c-btn {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    padding: 18px 32px;
+    border-radius: 8px;
+    color: $c_white;
+    line-height: 1;
+    @include rem(20);
+    @include media {
+        @include rem(24);
+        padding: 16px 32px;
+    }
+
+    &--primary {
+        background-color: $c_main;
+    }
+    &--cancel {
+        background-color: $c_cancel;
     }
 }

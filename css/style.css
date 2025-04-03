@@ -740,6 +740,9 @@ img {
   }
 }
 
+/*  ==============================
+* 矢印アイコン付きボタン
+============================== */
 .c-next-btn__link {
   font-size: 1.125rem;
   font-family: "Oleo Script Swash Caps", system-ui;
@@ -764,6 +767,84 @@ img {
 @media screen and (width > 768px) {
   .c-next-btn__icon {
     font-size: 3rem;
+  }
+}
+
+/*  ==============================
+* ラウンドボタン
+============================== */
+.c-round-btn-wrapper {
+  width: 54.9333333333vw;
+  margin: 0 auto;
+  max-width: 378px;
+}
+
+.c-round-btn {
+  display: grid;
+  place-content: center;
+  background-color: #ecdfc6;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  padding: 12px 42px;
+  border-radius: 100px;
+  box-shadow: 0 3px 0 0 #8d7341;
+  color: #4a311c;
+}
+@media screen and (width > 768px) {
+  .c-round-btn {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+/*  ==============================
+* 確定 / キャンセル ボタン
+============================== */
+.c-btn {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  padding: 18px 32px;
+  border-radius: 8px;
+  color: #ebebeb;
+  line-height: 1;
+  font-size: 1.25rem;
+}
+@media screen and (width > 768px) {
+  .c-btn {
+    font-size: 1.5rem;
+    padding: 16px 32px;
+  }
+}
+.c-btn--primary {
+  background-color: #6f4a2a;
+}
+.c-btn--cancel {
+  background-color: #8e8e8e;
+}
+
+/*  ==============================
+* 確認ボタンのラッパー
+============================== */
+.p-btn-confirm-wrapper {
+  width: 100%;
+}
+@media screen and (width > 768px) {
+  .p-btn-confirm-wrapper {
+    width: 320px;
+  }
+}
+
+/*  ==============================
+* キャンセルボタンのラッパー
+============================== */
+.p-btn-cancel-wrapper {
+  width: 62.8571428571%;
+  min-width: 190px;
+}
+@media screen and (width > 768px) {
+  .p-btn-cancel-wrapper {
+    width: 280px;
   }
 }
 
