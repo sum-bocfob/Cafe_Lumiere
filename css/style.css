@@ -379,7 +379,7 @@ th {
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.5;
@@ -798,6 +798,7 @@ img {
   border-radius: 100px;
   box-shadow: 0 3px 0 0 #8d7341;
   color: #4a311c;
+  font-weight: normal;
 }
 @media screen and (width > 768px) {
   .c-round-btn {
@@ -817,6 +818,8 @@ img {
   border-radius: 8px;
   color: #ebebeb;
   line-height: 1;
+  font-weight: normal;
+  transition-duration: 0.6s;
   font-size: 1.25rem;
 }
 @media screen and (width > 768px) {
@@ -830,6 +833,9 @@ img {
 }
 .c-btn--cancel {
   background-color: #8e8e8e;
+}
+.c-btn:hover {
+  scale: 1.015;
 }
 
 /*  ==============================
@@ -882,6 +888,34 @@ img {
 }
 .c-news-item__title {
   margin: calc((1lh - 1em) / -2) 0;
+}
+
+.c-shop-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.c-shop-info__heading {
+  font-size: 1.125rem;
+  font-family: "Raleway", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #1a1a1a;
+}
+.c-shop-info__list {
+  width: 100%;
+}
+.c-shop-info__item {
+  padding: 16px 2px;
+  border-bottom: 1px dashed #6f4a2a;
+}
+.c-shop-info__item:first-child {
+  padding-top: 0;
+}
+.c-shop-info__item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .p-news-list {

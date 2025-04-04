@@ -50,6 +50,7 @@
     border-radius: 100px;
     box-shadow: 0 3px 0 0 $c_shadow;
     color: $c_main2;
+    font-weight: normal;
     @include media {
         @include rem(24);
         letter-spacing: 0.1em;
@@ -67,6 +68,8 @@
     border-radius: 8px;
     color: $c_white;
     line-height: 1;
+    font-weight: normal;
+    transition-duration: $dur_def;
     @include rem(20);
     @include media {
         @include rem(24);
@@ -78,5 +81,9 @@
     }
     &--cancel {
         background-color: $c_cancel;
+    }
+
+    &:hover {
+        scale: 1.015;
     }
 }
