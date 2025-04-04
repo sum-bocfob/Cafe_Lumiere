@@ -60,18 +60,6 @@
     ============================== */
     .p-info {
         background-color: $c_bg1;
-        &__map {
-            width: 100%;
-            height: 165px;
-            margin-top: 15px;
-            display: block;
-            @include media {
-                max-width: 960px;
-                height: 530px;
-                margin: 0 auto;
-                margin-top: 60px;
-            }
-        }
 
         &__shop-info-wrapper {
             margin-top: 24px;

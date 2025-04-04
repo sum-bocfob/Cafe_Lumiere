@@ -433,11 +433,21 @@ img {
 }
 
 .l-section--subpage {
+  background-color: #efe4c3;
   padding: 32px 0 80px;
 }
 @media screen and (width > 768px) {
   .l-section--subpage {
     padding: 60px 0 84px;
+  }
+}
+
+.l-section--first {
+  margin-top: 60px;
+}
+@media screen and (width > 768px) {
+  .l-section--first {
+    margin-top: 78px;
   }
 }
 
@@ -946,6 +956,24 @@ img {
   border-bottom: none;
 }
 
+/*  ==============================
+* map
+============================== */
+.c-info-map {
+  width: 100%;
+  height: 165px;
+  margin-top: 15px;
+  display: block;
+}
+@media screen and (width > 768px) {
+  .c-info-map {
+    max-width: 960px;
+    height: 530px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+}
+
 .c-pagination-prev-next {
   height: 60px;
 }
@@ -1078,20 +1106,6 @@ img {
 .top .p-info {
   background-color: #efe4c3;
 }
-.top .p-info__map {
-  width: 100%;
-  height: 165px;
-  margin-top: 15px;
-  display: block;
-}
-@media screen and (width > 768px) {
-  .top .p-info__map {
-    max-width: 960px;
-    height: 530px;
-    margin: 0 auto;
-    margin-top: 60px;
-  }
-}
 .top .p-info__shop-info-wrapper {
   margin-top: 24px;
 }
@@ -1185,20 +1199,37 @@ img {
   line-height: 1;
 }
 
-.menu .p-menu {
-  background-color: #efe4c3;
-  margin-top: 60px;
-}
-@media screen and (width > 768px) {
-  .menu .p-menu {
-    margin-top: 78px;
-  }
-}
 .menu .p-menu__list {
   margin-top: 32px;
 }
 @media screen and (width > 768px) {
   .menu .p-menu__list {
+    margin-top: 60px;
+  }
+}
+
+.information .p-information__heading-sub {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4a311c;
+  text-align: center;
+  margin-top: 48px;
+}
+@media screen and (width > 768px) {
+  .information .p-information__heading-sub {
+    font-size: 1.5rem;
+    margin-top: 60px;
+  }
+}
+.information .p-information__access-text {
+  text-align: center;
+  margin-top: 32px;
+}
+.information .p-information .c-shop-info__heading {
+  margin-top: 32px;
+}
+@media screen and (width > 768px) {
+  .information .p-information .c-shop-info__heading {
     margin-top: 60px;
   }
 }

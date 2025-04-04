@@ -2,12 +2,6 @@
 
 .menu {
     .p-menu {
-        background-color: $c_bg1;
-        margin-top: $h_headerSP;
-        @include media {
-            margin-top: $h_headerPC;
-        }
-
         &__list {
             margin-top: 32px;
             @include media {

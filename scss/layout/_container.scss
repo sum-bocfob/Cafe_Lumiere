@@ -27,8 +27,16 @@
 }
 
 .l-section--subpage {
+    background-color: $c_bg1;
     padding: 32px 0 80px;
     @include media {
         padding: 60px 0 84px;
+    }
+}
+
+.l-section--first {
+    margin-top: $h_headerSP;
+    @include media {
+        margin-top: $h_headerPC;
     }
 }

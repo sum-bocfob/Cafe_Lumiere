@@ -1,0 +1,29 @@
+@use "../../global" as *;
+
+.information {
+    .p-information {
+        &__heading-sub {
+            @include rem(20);
+            font-weight: bold;
+            color: $c_main2;
+            text-align: center;
+            margin-top: 48px;
+            @include media {
+                @include rem(24);
+                margin-top: 60px;
+            }
+        }
+
+        &__access-text {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .c-shop-info__heading {
+            margin-top: 32px;
+            @include media {
+                margin-top: 60px;
+            }
+        }
+    }
+}
