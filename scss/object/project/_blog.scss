@@ -1,0 +1,29 @@
+@use "../../global" as *;
+
+/*  ==============================
+* タイトル
+============================== */
+.p-news-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include media {
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .c-news-item__header {
+        display: flex;
+        gap: 10px;
+        @include media {
+            gap: 16px;
+        }
+    }
+
+    .c-news-item__title {
+        @include rem(20);
+        font-weight: bold;
+        line-height: 1;
+    }
+}
