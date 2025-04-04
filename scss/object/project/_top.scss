@@ -1,0 +1,12 @@
+@use "../../global" as *;
+
+.p-news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    @include media {
+        gap: 36px;
+        margin-top: 60px;
+    }
+}

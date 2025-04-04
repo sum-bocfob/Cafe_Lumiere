@@ -24,3 +24,13 @@ $z: (
 @mixin z-index($name) {
     z-index: #{map-get($z, $name)};
 }
+
+/*  ==============================
+* 行間のマージン無くす
+============================== */
+@mixin del_line-height_margin() {
+    margin: calc((1lh - 1em) / -2) 0;
+}
+@function line-height_margin() {
+    @return calc((1lh - 1em) / -2);
+}

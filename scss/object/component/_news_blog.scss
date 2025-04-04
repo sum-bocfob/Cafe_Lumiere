@@ -1,0 +1,52 @@
+@use "../../global" as *;
+
+/*  ==============================
+* 日付
+============================== */
+.c-date {
+    font-weight: normal;
+}
+
+/*  ==============================
+* タグ
+============================== */
+.c-tag {
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 8px;
+    line-height: 1;
+    font-weight: normal;
+    color: $c_white;
+    @include rem(10);
+
+    &--green {
+        background-color: $c_tag_green;
+    }
+}
+
+/*  ==============================
+* ニュース / ブログ　一覧のアイテム
+============================== */
+.c-news-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include media {
+        flex-direction: row;
+        align-items: center;
+        gap: 21px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include media {
+            gap: 21px;
+        }
+    }
+
+    &__title {
+        @include del_line-height_margin;
+    }
+}

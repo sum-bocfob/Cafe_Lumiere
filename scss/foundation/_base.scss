@@ -2,10 +2,14 @@
 
 body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    font-size: 1rem;
+    @include rem(14);
+    font-weight: 300;
     line-height: 1.5;
     color: $c_body_main;
     font-feature-settings: "palt";
+    @include media {
+        @include rem(16);
+    }
 }
 
 a {

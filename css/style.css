@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*  ==============================
+* 行間のマージン無くす
+============================== */
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -377,10 +380,16 @@ th {
 
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  font-weight: 300;
   line-height: 1.5;
   color: #1a1a1a;
   font-feature-settings: "palt";
+}
+@media screen and (width > 768px) {
+  body {
+    font-size: 1rem;
+  }
 }
 
 a {
@@ -821,6 +830,71 @@ img {
 }
 .c-btn--cancel {
   background-color: #8e8e8e;
+}
+
+/*  ==============================
+* 日付
+============================== */
+.c-date {
+  font-weight: normal;
+}
+
+/*  ==============================
+* タグ
+============================== */
+.c-tag {
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 8px;
+  line-height: 1;
+  font-weight: normal;
+  color: #ebebeb;
+  font-size: 0.625rem;
+}
+.c-tag--green {
+  background-color: #7a8446;
+}
+
+/*  ==============================
+* ニュース / ブログ　一覧のアイテム
+============================== */
+.c-news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (width > 768px) {
+  .c-news-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 21px;
+  }
+}
+.c-news-item__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (width > 768px) {
+  .c-news-item__header {
+    gap: 21px;
+  }
+}
+.c-news-item__title {
+  margin: calc((1lh - 1em) / -2) 0;
+}
+
+.p-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+@media screen and (width > 768px) {
+  .p-news-list {
+    gap: 36px;
+    margin-top: 60px;
+  }
 }
 
 /*  ==============================
