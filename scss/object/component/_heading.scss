@@ -72,6 +72,7 @@
     padding-left: 0.1em;
     line-height: 1;
     color: $c_main2;
+    text-align: center;
     @include media {
         @include rem(60);
         letter-spacing: 0.05em;

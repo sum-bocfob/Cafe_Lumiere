@@ -432,6 +432,15 @@ img {
   }
 }
 
+.l-section--subpage {
+  padding: 32px 0 80px;
+}
+@media screen and (width > 768px) {
+  .l-section--subpage {
+    padding: 60px 0 84px;
+  }
+}
+
 .l-header {
   background-color: #6f4a2a;
   width: 100%;
@@ -750,6 +759,7 @@ img {
   padding-left: 0.1em;
   line-height: 1;
   color: #4a311c;
+  text-align: center;
 }
 @media screen and (width > 768px) {
   .c-heading-subpage {
@@ -996,7 +1006,16 @@ img {
 .c-menu__img {
   border-radius: 8px;
 }
-.p-top {
+.c-menu__name {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 0px;
+  justify-content: center;
+}
+
+.top {
   /*  ==============================
   * ヒーロー画像
   ============================== */
@@ -1016,7 +1035,7 @@ img {
   * 予約
   ============================== */
 }
-.p-top .p-hero {
+.top .p-hero {
   width: 100%;
   height: 210px;
   margin-top: 60px;
@@ -1026,65 +1045,65 @@ img {
   background-repeat: no-repeat;
 }
 @media screen and (width > 768px) {
-  .p-top .p-hero {
+  .top .p-hero {
     height: calc(100vh - 78px);
     margin-top: 78px;
   }
 }
-.p-top .c-next-btn {
+.top .c-next-btn {
   margin-top: 48px;
   text-align: right;
 }
-.p-top .p-news {
+.top .p-news {
   background-color: #efe4c3;
 }
-.p-top .p-news-list {
+.top .p-news-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 16px;
 }
 @media screen and (width > 768px) {
-  .p-top .p-news-list {
+  .top .p-news-list {
     gap: 36px;
     margin-top: 60px;
   }
 }
-.p-top .p-menu {
+.top .p-menu {
   background-color: #ecdfc6;
 }
-.p-top .p-menu__list {
+.top .p-menu__list {
   margin-top: 16px;
 }
-.p-top .p-info {
+.top .p-info {
   background-color: #efe4c3;
 }
-.p-top .p-info__map {
+.top .p-info__map {
   width: 100%;
   height: 165px;
   margin-top: 15px;
   display: block;
 }
 @media screen and (width > 768px) {
-  .p-top .p-info__map {
+  .top .p-info__map {
     max-width: 960px;
     height: 530px;
     margin: 0 auto;
     margin-top: 60px;
   }
 }
-.p-top .p-info__shop-info-wrapper {
+.top .p-info__shop-info-wrapper {
   margin-top: 24px;
 }
 @media screen and (width > 768px) {
-  .p-top .p-info__shop-info-wrapper {
+  .top .p-info__shop-info-wrapper {
     margin-top: 60px;
   }
 }
-.p-top .p-reserve {
+.top .p-reserve {
   background-color: #ecdfc6;
 }
-.p-top .p-reserve__cta {
+.top .p-reserve__cta {
   display: block;
   margin-top: 16px;
   width: 100%;
@@ -1098,13 +1117,13 @@ img {
   margin-top: 16px;
 }
 @media screen and (width > 768px) {
-  .p-top .p-reserve__cta {
+  .top .p-reserve__cta {
     height: 404px;
     max-width: 960px;
     margin-top: 60px;
   }
 }
-.p-top .p-reserve .c-round-btn-wrapper {
+.top .p-reserve .c-round-btn-wrapper {
   position: absolute;
   left: 50%;
   bottom: 12px;
@@ -1164,6 +1183,24 @@ img {
   font-size: 1.25rem;
   font-weight: bold;
   line-height: 1;
+}
+
+.menu .p-menu {
+  background-color: #efe4c3;
+  margin-top: 60px;
+}
+@media screen and (width > 768px) {
+  .menu .p-menu {
+    margin-top: 78px;
+  }
+}
+.menu .p-menu__list {
+  margin-top: 32px;
+}
+@media screen and (width > 768px) {
+  .menu .p-menu__list {
+    margin-top: 60px;
+  }
 }
 
 .u-upper-case {

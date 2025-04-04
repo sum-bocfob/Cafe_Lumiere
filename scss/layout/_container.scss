@@ -25,3 +25,10 @@
         padding: 60px 0;
     }
 }
+
+.l-section--subpage {
+    padding: 32px 0 80px;
+    @include media {
+        padding: 60px 0 84px;
+    }
+}
