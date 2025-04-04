@@ -1,12 +1,115 @@
 @use "../../global" as *;
 
-.p-news-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 16px;
-    @include media {
-        gap: 36px;
-        margin-top: 60px;
+.p-top {
+    /*  ==============================
+    * ヒーロー画像
+    ============================== */
+    .p-hero {
+        width: 100%;
+        height: 210px;
+        margin-top: $h_headerSP;
+        background-image: url("../img/exterior.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        @include media {
+            height: calc(100vh - $h_headerPC);
+            margin-top: $h_headerPC;
+        }
+    }
+
+    /*  ==============================
+    * MOREボタン
+    ============================== */
+    .c-next-btn {
+        margin-top: 48px;
+        text-align: right;
+    }
+
+    /*  ==============================
+    * ニュース一覧
+    ============================== */
+    .p-news {
+        background-color: $c_bg1;
+    }
+
+    .p-news-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+        @include media {
+            gap: 36px;
+            margin-top: 60px;
+        }
+    }
+
+    /*  ==============================
+    * メニュー
+    ============================== */
+    .p-menu {
+        background-color: $c_bg2;
+
+        &__list {
+            margin-top: 16px;
+        }
+    }
+
+    /*  ==============================
+    * 店舗情報
+    ============================== */
+    .p-info {
+        background-color: $c_bg1;
+        &__map {
+            width: 100%;
+            height: 165px;
+            margin-top: 15px;
+            display: block;
+            @include media {
+                max-width: 960px;
+                height: 530px;
+                margin: 0 auto;
+                margin-top: 60px;
+            }
+        }
+
+        &__shop-info-wrapper {
+            margin-top: 24px;
+            @include media {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    /*  ==============================
+    * 予約
+    ============================== */
+    .p-reserve {
+        background-color: $c_bg2;
+        &__cta {
+            display: block;
+            margin-top: 16px;
+            width: 100%;
+            aspect-ratio: 375/158;
+            background-image: url("../img/women.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 16px;
+            @include media {
+                height: 404px;
+                max-width: 960px;
+                margin-top: 60px;
+            }
+        }
+
+        .c-round-btn-wrapper {
+            position: absolute;
+            left: 50%;
+            bottom: 12px;
+            translate: -50% 0;
+        }
     }
 }

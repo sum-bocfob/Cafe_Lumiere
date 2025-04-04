@@ -1,3 +1,5 @@
+@use "../global" as *;
+
 .l-containerL {
     width: 100%;
     max-width: 1332px;
@@ -12,7 +14,14 @@
 }
 .l-containerS {
     width: 100%;
-    max-width: 752px;
+    max-width: 792px;
     padding: 0 16px;
     margin: 0 auto;
+}
+
+.l-section {
+    padding: 32px 0;
+    @include media {
+        padding: 60px 0;
+    }
 }

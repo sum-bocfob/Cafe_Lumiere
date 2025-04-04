@@ -1,0 +1,12 @@
+@use "../../global" as *;
+
+.u-grid4-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+    row-gap: 24px;
+    @include media {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 40px;
+    }
+}

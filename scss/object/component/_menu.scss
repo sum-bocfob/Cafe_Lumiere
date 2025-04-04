@@ -1,0 +1,15 @@
+@use "../../global" as *;
+
+.c-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    &__img {
+        border-radius: 8px;
+    }
+
+    &__name {
+    }
+}

@@ -418,9 +418,18 @@ img {
 
 .l-containerS {
   width: 100%;
-  max-width: 752px;
+  max-width: 792px;
   padding: 0 16px;
   margin: 0 auto;
+}
+
+.l-section {
+  padding: 32px 0;
+}
+@media screen and (width > 768px) {
+  .l-section {
+    padding: 60px 0;
+  }
 }
 
 .l-header {
@@ -757,7 +766,7 @@ img {
   font-size: 1.125rem;
   font-family: "Oleo Script Swash Caps", system-ui;
   color: #4a311c;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
 }
@@ -844,6 +853,7 @@ img {
 ============================== */
 .c-date {
   font-weight: normal;
+  flex-shrink: 0;
 }
 
 /*  ==============================
@@ -856,10 +866,16 @@ img {
   line-height: 1;
   font-weight: normal;
   color: #ebebeb;
+  flex-shrink: 0;
+  min-width: 62px;
+  text-align: center;
   font-size: 0.625rem;
 }
 .c-tag--green {
   background-color: #7a8446;
+}
+.c-tag--navy {
+  background-color: #404a4a;
 }
 
 /*  ==============================
@@ -873,7 +889,7 @@ img {
 @media screen and (width > 768px) {
   .c-news-item {
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     gap: 21px;
   }
 }
@@ -881,6 +897,7 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 @media screen and (width > 768px) {
   .c-news-item__header {
@@ -970,17 +987,128 @@ img {
   opacity: 0.6;
 }
 
-.p-news-list {
+.c-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.c-menu__img {
+  border-radius: 8px;
+}
+.p-top {
+  /*  ==============================
+  * ヒーロー画像
+  ============================== */
+  /*  ==============================
+  * MOREボタン
+  ============================== */
+  /*  ==============================
+  * ニュース一覧
+  ============================== */
+  /*  ==============================
+  * メニュー
+  ============================== */
+  /*  ==============================
+  * 店舗情報
+  ============================== */
+  /*  ==============================
+  * 予約
+  ============================== */
+}
+.p-top .p-hero {
+  width: 100%;
+  height: 210px;
+  margin-top: 60px;
+  background-image: url("../img/exterior.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media screen and (width > 768px) {
+  .p-top .p-hero {
+    height: calc(100vh - 78px);
+    margin-top: 78px;
+  }
+}
+.p-top .c-next-btn {
+  margin-top: 48px;
+  text-align: right;
+}
+.p-top .p-news {
+  background-color: #efe4c3;
+}
+.p-top .p-news-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 16px;
 }
 @media screen and (width > 768px) {
-  .p-news-list {
+  .p-top .p-news-list {
     gap: 36px;
     margin-top: 60px;
   }
+}
+.p-top .p-menu {
+  background-color: #ecdfc6;
+}
+.p-top .p-menu__list {
+  margin-top: 16px;
+}
+.p-top .p-info {
+  background-color: #efe4c3;
+}
+.p-top .p-info__map {
+  width: 100%;
+  height: 165px;
+  margin-top: 15px;
+  display: block;
+}
+@media screen and (width > 768px) {
+  .p-top .p-info__map {
+    max-width: 960px;
+    height: 530px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+}
+.p-top .p-info__shop-info-wrapper {
+  margin-top: 24px;
+}
+@media screen and (width > 768px) {
+  .p-top .p-info__shop-info-wrapper {
+    margin-top: 60px;
+  }
+}
+.p-top .p-reserve {
+  background-color: #ecdfc6;
+}
+.p-top .p-reserve__cta {
+  display: block;
+  margin-top: 16px;
+  width: 100%;
+  aspect-ratio: 375/158;
+  background-image: url("../img/women.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+@media screen and (width > 768px) {
+  .p-top .p-reserve__cta {
+    height: 404px;
+    max-width: 960px;
+    margin-top: 60px;
+  }
+}
+.p-top .p-reserve .c-round-btn-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  translate: -50% 0;
 }
 
 /*  ==============================
@@ -1040,4 +1168,19 @@ img {
 
 .u-upper-case {
   text-transform: uppercase;
+}
+
+.u-grid4-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 24px;
+}
+@media screen and (width > 768px) {
+  .u-grid4-2 {
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
