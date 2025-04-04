@@ -1,9 +1,12 @@
+@use "sass:color";
+
 $c_main: #6f4a2a;
 $c_main2: #4a311c;
 $c_body_main: #1a1a1a;
 $c_white: #ebebeb;
 $c_bg1: #efe4c3;
 $c_bg2: #ecdfc6;
+$c_bg_middle: color.change(color.mix($c_bg1, $c_bg2, 50%), $saturation: 55%);
 $c_shadow: #8d7341;
 $c_cancel: #8e8e8e;
 $c_tag_green: #7a8446;

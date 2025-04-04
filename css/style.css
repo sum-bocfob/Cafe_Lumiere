@@ -1083,7 +1083,7 @@ img {
   text-align: right;
 }
 .top .p-news {
-  background-color: #efe4c3;
+  background-image: linear-gradient(#efe4c3, #eee2c5, #ecdfc6);
 }
 .top .p-news-list {
   display: flex;
@@ -1099,12 +1099,13 @@ img {
 }
 .top .p-menu {
   background-color: #ecdfc6;
+  background-image: linear-gradient(#ecdfc6, #eee2c5, #efe4c3);
 }
 .top .p-menu__list {
   margin-top: 16px;
 }
 .top .p-info {
-  background-color: #efe4c3;
+  background-image: linear-gradient(#efe4c3, #eee2c5, #ecdfc6);
 }
 .top .p-info__shop-info-wrapper {
   margin-top: 24px;
@@ -1116,6 +1117,7 @@ img {
 }
 .top .p-reserve {
   background-color: #ecdfc6;
+  background-image: linear-gradient(#ecdfc6, #eee2c5, #efe4c3);
 }
 .top .p-reserve__cta {
   display: block;

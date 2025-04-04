@@ -30,7 +30,7 @@
     * ニュース一覧
     ============================== */
     .p-news {
-        background-color: $c_bg1;
+        background-image: linear-gradient($c_bg1, $c_bg_middle, $c_bg2);
     }
 
     .p-news-list {
@@ -49,6 +49,7 @@
     ============================== */
     .p-menu {
         background-color: $c_bg2;
+        background-image: linear-gradient($c_bg2, $c_bg_middle, $c_bg1);
 
         &__list {
             margin-top: 16px;
@@ -59,7 +60,7 @@
     * 店舗情報
     ============================== */
     .p-info {
-        background-color: $c_bg1;
+        background-image: linear-gradient($c_bg1, $c_bg_middle, $c_bg2);
 
         &__shop-info-wrapper {
             margin-top: 24px;
@@ -74,6 +75,8 @@
     ============================== */
     .p-reserve {
         background-color: $c_bg2;
+        background-image: linear-gradient($c_bg2, $c_bg_middle, $c_bg1);
+
         &__cta {
             display: block;
             margin-top: 16px;
