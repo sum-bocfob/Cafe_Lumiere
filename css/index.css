@@ -399,4 +399,29 @@ a {
 img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+input,
+textarea,
+select {
+  border-radius: 4px;
+  border: 1px solid #1a1a1a;
+  font-size: 1rem;
+  padding: 8px;
+  color: #1a1a1a;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline-color: #6f4a2a;
+}
+
+textarea {
+  resize: none;
+  height: 160px;
+}
+
+fieldset,
+legend {
+  display: contents;
 }/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,17 @@
+@use "../../global" as *;
+
+.c-form-required {
+    background-color: $c_main;
+    color: $c_white;
+    line-height: 24px;
+    border-radius: 4px;
+    padding: 0 4px;
+    height: 24px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    @include rem(14);
+    font-weight: normal;
+    @include media {
+        margin-left: 16px;
+    }
+}

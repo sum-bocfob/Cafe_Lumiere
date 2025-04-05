@@ -32,7 +32,10 @@
         />
 
         <!-- Material Icon -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_left,keyboard_arrow_right,keyboard_double_arrow_right" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down,keyboard_arrow_left,keyboard_arrow_right,keyboard_double_arrow_right"
+        />
         <!-- Import CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css" />
         <link rel="stylesheet" href="css/style.css" />
@@ -70,76 +73,134 @@
                     <!-- form -->
                     <form action="#" method="post" class="p-form">
                         <div class="p-form__area">
-                            <label for="name" class="p-form__label p-form__label--required">お名前</label>
+                            <label for="name" class="p-form__label">お名前<span class="c-form-required">※必須</span></label>
                             <input type="text" name="name" id="name" class="p-form__input" placeholder="山田太郎" autofocus />
                         </div>
                         <div class="p-form__area">
-                            <label for="tel" class="p-form__label p-form__label--required">電話番号<span class="p-form__note">(ハイフンなしで入力してください)</span></label>
+                            <div class="p-form__label p-form__label--tel">
+                                <label for="tel" class="">電話番号<span class="p-form__note">(ハイフンなしで入力してください)</span></label>
+                                <span class="c-form-required">※必須</span>
+                            </div>
                             <input type="tel" name="tel" id="tel" class="p-form__input" placeholder="例: 99999999999" />
                         </div>
                         <div class="p-form__area">
-                            <label for="mail" class="p-form__label p-form__label--required">メールアドレス</label>
+                            <label for="mail" class="p-form__label">メールアドレス</label>
                             <input type="email" name="mail" id="mail" class="p-form__input" placeholder="例: aaa@aaa.aa" />
                         </div>
+
+                        <!-- * ご予約人数 ======================== -->
                         <div class="p-form__area">
-                            <label for="num" class="p-form__label p-form__label--required">ご予約人数</label>
-                            <input type="number" name="num" id="num" class="p-form__input" min="1" max="6" />名様
-                        </div>
-                        <div class="p-form__area">
-                            <fieldset>
-                                <legend class="p-form__label p-form__label--required">ご予約日時</legend>
-                                <!-- 月 -->
-                                <div class="p-form__date">
-                                    <select name="month" id="month">
+                            <label for="num" class="p-form__label">ご予約人数<span class="c-form-required">※必須</span></label>
+
+                            <div class="p-form__select-area">
+                                <div class="p-form__select-wrapper">
+                                    <select name="num" id="num" class="p-form__select-sm">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
                                         <option value="5">5</option>
                                         <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option></select
-                                    >月
-                                    <!-- 日 月変更したらJSで子要素option追加 曜日変更-->
-                                    <select name="date" id="date"></select
-                                    >日 ( <span class="p-form__day-of-week"></span>)
+                                    </select>
                                 </div>
-                                <!-- /.p-form__month -->
-                                <div class="p-form__hour">
-                                    <!-- JSで子要素option追加 -->
-                                    <select name="hour" id="hour"></select
-                                    >時
-                                    <!-- 15分刻み -->
-                                    <select name="minutes" id="minutes">
-                                        <option value="00">00</option>
-                                        <option value="15">15</option>
-                                        <option value="30">30</option>
-                                        <option value="45">45</option></select
-                                    >分
-                                </div>
-                            </fieldset>
+                                <div>名様</div>
+                            </div>
+                            <!-- /.p-form__select-area -->
                         </div>
                         <!-- /.p-form__area -->
 
+                        <!-- * ご予約日時 ======================== -->
+                        <div class="p-form__area">
+                            <div class="p-form__fieldset">
+                                <fieldset>
+                                    <legend>
+                                        <span class="p-form__label">ご予約日時<span class="c-form-required">※必須</span></span>
+                                    </legend>
+                                    <!-- * 月日 -->
+                                    <div class="p-form__month">
+                                        <div class="p-form__select-area-wrapper">
+                                            <div class="p-form__select-area">
+                                                <div class="p-form__select-wrapper">
+                                                    <select name="month" id="month" class="p-form__select-sm">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                </div>
+                                                月
+                                                <!-- 日 月変更したらJSで子要素option追加 曜日変更-->
+                                                <div class="p-form__select-wrapper">
+                                                    <select name="date" id="date" class="p-form__select-sm p-form__select-wrapper"></select>
+                                                </div>
+                                                日
+                                            </div>
+                                            <!-- /.p-form__select-area -->
+                                            <div>( <span class="p-form__day-of-week"></span>)</div>
+                                        </div>
+                                        <!-- /.p-form__select-area-wrapper -->
+                                    </div>
+                                    <!-- /.p-form__month -->
+
+                                    <!-- * 時分 -->
+                                    <div class="p-form__hour">
+                                        <div class="p-form__select-area-wrapper">
+                                            <div class="p-form__select-area">
+                                                <!-- JSで子要素option追加 -->
+                                                <div class="p-form__select-wrapper">
+                                                    <select name="hour" id="hour" class="p-form__select-sm"></select>
+                                                </div>
+                                                時
+                                                <!-- 15分刻み -->
+                                                <div class="p-form__select-wrapper">
+                                                    <select name="minutes" id="minutes" class="p-form__select-sm">
+                                                        <option value="00">00</option>
+                                                        <option value="15">15</option>
+                                                        <option value="30">30</option>
+                                                        <option value="45">45</option>
+                                                    </select>
+                                                </div>
+                                                分
+                                            </div>
+                                            <!-- /.p-form__select-area -->
+                                        </div>
+                                        <!-- /.p-form__select-area-wrapper -->
+                                    </div>
+                                    <!-- /.p-form__hour -->
+                                </fieldset>
+                            </div>
+                            <!-- /.p-form__fieldset -->
+                        </div>
+                        <!-- /.p-form__area -->
+
+                        <!-- * 希望の座席 ======================== -->
                         <div class="p-form__area">
                             <label for="seat" class="p-form__label">希望の座席</label>
-                            <select name="seat" id="seat">
-                                <option value="特になし">特になし</option>
-                                <option value="テーブル">テーブル</option>
-                                <option value="ソファ">ソファ</option>
-                                <option value="カウンター">カウンター</option>
-                            </select>
+                            <div class="p-form__select-wrapper">
+                                <select name="seat" id="seat" class="p-form__select-100per">
+                                    <option value="特になし">特になし</option>
+                                    <option value="テーブル">テーブル</option>
+                                    <option value="ソファ">ソファ</option>
+                                    <option value="カウンター">カウンター</option>
+                                </select>
+                            </div>
                         </div>
 
+                        <!-- * 備考 ======================== -->
                         <div class="p-form__area">
                             <label for="option" class="p-form__label">備考</label>
-                            <textarea name="option" id="option"></textarea>
+                            <textarea name="option" id="option" class="p-form__textarea"></textarea>
                         </div>
 
+                        <!-- * 確認ボタン ======================== -->
                         <div class="p-btn-confirm-wrapper"><button type="button" class="c-btn c-btn--primary js-open-modal">予約内容の確認</button></div>
                     </form>
 

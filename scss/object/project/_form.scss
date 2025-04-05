@@ -1,12 +1,131 @@
 @use "../../global" as *;
 
 /*  ==============================
+* 予約フォーム
+============================== */
+.p-form {
+    background-color: $c_bg_dialg;
+    border-radius: 16px;
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+    @include media {
+        padding: 32px;
+        margin-top: 60px;
+    }
+
+    &__area {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @include media {
+            flex-direction: row;
+            align-items: baseline;
+            gap: 32px;
+        }
+    }
+
+    &__label {
+        @include media {
+            width: 25.99531615925059%;
+            text-align: right;
+            position: relative;
+        }
+    }
+
+    &__label--tel {
+        @include media {
+            display: flex;
+            justify-content: flex-end;
+            align-content: center;
+            text-align: right;
+        }
+    }
+
+    &__note {
+        @include rem(10);
+        margin-left: 4px;
+        @include media {
+            margin-left: 0;
+            display: block;
+        }
+    }
+
+    &__input {
+        @include media {
+            width: 360px;
+        }
+    }
+
+    &__select-area {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+
+    &__select-sm {
+        width: 48px;
+        text-align: left;
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        @include media {
+            flex-direction: row;
+            align-items: center;
+            gap: 32px;
+        }
+    }
+
+    // selectの親に疑似要素でアイコン
+    &__select-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        &::after {
+            position: absolute;
+            font-family: "Material Icons";
+            content: "\e313";
+            @include rem(16);
+            top: 50%;
+            translate: 0 -38%;
+            right: 4px;
+            pointer-events: none;
+        }
+    }
+
+    &__select-100per {
+        width: 100%;
+    }
+
+    &__textarea {
+        @include media {
+            width: 70%;
+        }
+    }
+}
+
+/*  ==============================
 * 確認ボタンのラッパー
 ============================== */
 .p-btn-confirm-wrapper {
     width: 100%;
+    margin-top: 24px;
     @include media {
         width: 320px;
+        margin: 0 auto;
+        margin-top: 48px;
     }
 }
 /*  ==============================
@@ -32,6 +151,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include media {
+            width: 50%;
+        }
     }
 
     &::backdrop {
@@ -77,21 +199,31 @@
 }
 
 /*  ==============================
-* 予約受け付けダイアログ
+* 予約受け付け完了ダイアログ
 ============================== */
 .p-dialog-gotcha {
+    transition-duration: $dur_def;
+    transition-timing-function: ease-out;
+    position: fixed;
+    display: flex;
+    top: -100%;
+    opacity: 0;
+    pointer-events: none;
+
     &[open] {
         width: 90vw;
-        position: fixed;
         top: 30px;
         left: 50%;
         translate: -50% 0;
         @include z-index("dialog");
         border-radius: 8px;
-        display: flex;
         justify-content: center;
         align-items: center;
         gap: 5%;
+        border: 2px solid $c_main2;
+        max-width: 600px;
+        opacity: 1;
+        pointer-events: all;
     }
 
     &__close {

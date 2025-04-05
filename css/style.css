@@ -402,6 +402,31 @@ img {
   vertical-align: bottom;
 }
 
+input,
+textarea,
+select {
+  border-radius: 4px;
+  border: 1px solid #1a1a1a;
+  font-size: 1rem;
+  padding: 8px;
+  color: #1a1a1a;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline-color: #6f4a2a;
+}
+
+textarea {
+  resize: none;
+  height: 160px;
+}
+
+fieldset,
+legend {
+  display: contents;
+}
+
 .l-containerL {
   width: 100%;
   max-width: 1332px;
@@ -1043,6 +1068,24 @@ img {
   justify-content: center;
 }
 
+.c-form-required {
+  background-color: #6f4a2a;
+  color: #ebebeb;
+  line-height: 24px;
+  border-radius: 4px;
+  padding: 0 4px;
+  height: 24px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+@media screen and (width > 768px) {
+  .c-form-required {
+    margin-left: 16px;
+  }
+}
+
 .top {
   /*  ==============================
   * ヒーロー画像
@@ -1147,14 +1190,128 @@ img {
 }
 
 /*  ==============================
+* 予約フォーム
+============================== */
+.p-form {
+  background-color: #f6f6f6;
+  border-radius: 16px;
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+@media screen and (width > 768px) {
+  .p-form {
+    padding: 32px;
+    margin-top: 60px;
+  }
+}
+.p-form__area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media screen and (width > 768px) {
+  .p-form__area {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 32px;
+  }
+}
+@media screen and (width > 768px) {
+  .p-form__label {
+    width: 25.9953161593%;
+    text-align: right;
+    position: relative;
+  }
+}
+@media screen and (width > 768px) {
+  .p-form__label--tel {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    text-align: right;
+  }
+}
+.p-form__note {
+  font-size: 0.625rem;
+  margin-left: 4px;
+}
+@media screen and (width > 768px) {
+  .p-form__note {
+    margin-left: 0;
+    display: block;
+  }
+}
+@media screen and (width > 768px) {
+  .p-form__input {
+    width: 360px;
+  }
+}
+.p-form__select-area {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.p-form__select-area-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.p-form__select-sm {
+  width: 48px;
+  text-align: left;
+}
+.p-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+@media screen and (width > 768px) {
+  .p-form__fieldset {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+}
+.p-form__select-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.p-form__select-wrapper::after {
+  position: absolute;
+  font-family: "Material Icons";
+  content: "\e313";
+  font-size: 1rem;
+  top: 50%;
+  translate: 0 -38%;
+  right: 4px;
+  pointer-events: none;
+}
+.p-form__select-100per {
+  width: 100%;
+}
+@media screen and (width > 768px) {
+  .p-form__textarea {
+    width: 70%;
+  }
+}
+
+/*  ==============================
 * 確認ボタンのラッパー
 ============================== */
 .p-btn-confirm-wrapper {
   width: 100%;
+  margin-top: 24px;
 }
 @media screen and (width > 768px) {
   .p-btn-confirm-wrapper {
     width: 320px;
+    margin: 0 auto;
+    margin-top: 48px;
   }
 }
 
@@ -1182,6 +1339,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (width > 768px) {
+  .p-dialog[open] {
+    width: 50%;
+  }
 }
 .p-dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.3);
@@ -1221,20 +1383,31 @@ img {
 }
 
 /*  ==============================
-* 予約受け付けダイアログ
+* 予約受け付け完了ダイアログ
 ============================== */
+.p-dialog-gotcha {
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+  position: fixed;
+  display: flex;
+  top: -100%;
+  opacity: 0;
+  pointer-events: none;
+}
 .p-dialog-gotcha[open] {
   width: 90vw;
-  position: fixed;
   top: 30px;
   left: 50%;
   translate: -50% 0;
   z-index: 2000;
   border-radius: 8px;
-  display: flex;
   justify-content: center;
   align-items: center;
   gap: 5%;
+  border: 2px solid #4a311c;
+  max-width: 600px;
+  opacity: 1;
+  pointer-events: all;
 }
 .p-dialog-gotcha__close {
   background-color: #6f4a2a;
