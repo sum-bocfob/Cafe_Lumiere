@@ -20,6 +20,7 @@ $z: (
     "header": 500,
     "gnav": 1000,
     "menu-btn": 1500,
+    "dialog": 2000,
 );
 @mixin z-index($name) {
     z-index: #{map-get($z, $name)};

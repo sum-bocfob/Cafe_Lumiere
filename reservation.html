@@ -71,7 +71,7 @@
                     <form action="#" method="post" class="p-form">
                         <div class="p-form__area">
                             <label for="name" class="p-form__label p-form__label--required">お名前</label>
-                            <input type="text" name="name" id="name" class="p-form__input" placeholder="山田太郎" />
+                            <input type="text" name="name" id="name" class="p-form__input" placeholder="山田太郎" autofocus />
                         </div>
                         <div class="p-form__area">
                             <label for="tel" class="p-form__label p-form__label--required">電話番号<span class="p-form__note">(ハイフンなしで入力してください)</span></label>
@@ -89,27 +89,106 @@
                             <fieldset>
                                 <legend class="p-form__label p-form__label--required">ご予約日時</legend>
                                 <!-- 月 -->
-                                <select name="month" id="month">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option></select
-                                >月
-                                <!-- 日 -->
-                                <select name="date" id="date">
-                                    <!--  --></select
-                                >日 ( <span class="p-form__day-of-week"></span>)
+                                <div class="p-form__date">
+                                    <select name="month" id="month">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option></select
+                                    >月
+                                    <!-- 日 月変更したらJSで子要素option追加 曜日変更-->
+                                    <select name="date" id="date"></select
+                                    >日 ( <span class="p-form__day-of-week"></span>)
+                                </div>
+                                <!-- /.p-form__month -->
+                                <div class="p-form__hour">
+                                    <!-- JSで子要素option追加 -->
+                                    <select name="hour" id="hour"></select
+                                    >時
+                                    <!-- 15分刻み -->
+                                    <select name="minutes" id="minutes">
+                                        <option value="00">00</option>
+                                        <option value="15">15</option>
+                                        <option value="30">30</option>
+                                        <option value="45">45</option></select
+                                    >分
+                                </div>
                             </fieldset>
                         </div>
+                        <!-- /.p-form__area -->
+
+                        <div class="p-form__area">
+                            <label for="seat" class="p-form__label">希望の座席</label>
+                            <select name="seat" id="seat">
+                                <option value="特になし">特になし</option>
+                                <option value="テーブル">テーブル</option>
+                                <option value="ソファ">ソファ</option>
+                                <option value="カウンター">カウンター</option>
+                            </select>
+                        </div>
+
+                        <div class="p-form__area">
+                            <label for="option" class="p-form__label">備考</label>
+                            <textarea name="option" id="option"></textarea>
+                        </div>
+
+                        <div class="p-btn-confirm-wrapper"><button type="button" class="c-btn c-btn--primary js-open-modal">予約内容の確認</button></div>
                     </form>
+
+                    <!-- * 確認ダイアログ ======================== -->
+                    <div class="p-dialog-wrapper">
+                        <dialog id="dialog" class="p-dialog">
+                            <h2 class="p-dialog__heading">まだご予約は完了していません！</h2>
+                            <p class="p-dialog__text">以下の内容でご予約を承ります。<br />よろしいですか？</p>
+                            <div class="p-dialog__confirm-area">
+                                <dl class="p-dialog__dl">
+                                    <!-- * JSで入力した項目埋める ======================== -->
+                                    <div class="p-dialog__dl-item">
+                                        <dt class="p-dialog__title">お名前:</dt>
+                                        <!-- 末尾に「様」 -->
+                                        <dd class="p-dialog__inputed p-dialog__inputed--name"></dd>
+                                    </div>
+                                    <div class="p-dialog__dl-item">
+                                        <dt class="p-dialog__title">電話番号:</dt>
+                                        <dd class="p-dialog__inputed p-dialog__inputed--tel"></dd>
+                                    </div>
+                                    <div class="p-dialog__dl-item">
+                                        <dt class="p-dialog__title">メールアドレス:</dt>
+                                        <dd class="p-dialog__inputed p-dialog__inputed--mail"></dd>
+                                    </div>
+                                    <div class="p-dialog__dl-item">
+                                        <dt class="p-dialog__title">ご予約人数:</dt>
+                                        <!-- 末尾に「名様」 -->
+                                        <dd class="p-dialog__inputed p-dialog__inputed--num"></dd>
+                                    </div>
+                                    <div class="p-dialog__dl-item">
+                                        <dt class="p-dialog__title">ご予約日時:</dt>
+                                        <dd class="p-dialog__inputed p-dialog__inputed--date"></dd>
+                                    </div>
+                                    <div class="p-dialog__dl-item">
+                                        <dt class="p-dialog__title">希望の座席:</dt>
+                                        <dd class="p-dialog__inputed p-dialog__inputed--seat"></dd>
+                                    </div>
+                                    <div class="p-dialog__dl-item">
+                                        <dt class="p-dialog__title">備考:</dt>
+                                        <dd class="p-dialog__inputed p-dialog__inputed--option"></dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="p-btn-confirm-wrapper"><button type="button" class="c-btn c-btn--primary p-dialog__confirm">予約を確定する</button></div>
+                            <div class="p-btn-cancel-wrapper"><button type="button" class="c-btn c-btn--cancel p-dialog__cancel">入力画面に戻る</button></div>
+                        </dialog>
+                    </div>
+                    <!-- /.p-dialog-wrapper -->
+                    <dialog class="p-dialog-gotcha">予約を受け付けました。<button type="button" class="p-dialog-gotcha__close">OK</button></dialog>
                 </div>
                 <!-- /.l-containerS -->
             </section>

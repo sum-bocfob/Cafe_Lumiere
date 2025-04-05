@@ -1172,6 +1172,81 @@ img {
 }
 
 /*  ==============================
+* ダイアログ
+============================== */
+.p-dialog[open] {
+  width: 94.6666666667%;
+  padding: 32px 24px;
+  border-radius: 16px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.p-dialog__heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #6f4a2a;
+}
+.p-dialog__text {
+  margin-top: 40px;
+  text-align: center;
+}
+.p-dialog__confirm-area {
+  width: 100%;
+}
+.p-dialog__dl {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.p-dialog__dl-item {
+  display: flex;
+  gap: 18px;
+  line-height: 1;
+}
+.p-dialog__title {
+  width: 30.985915493%;
+  font-weight: 300;
+}
+.p-dialog .p-btn-confirm-wrapper {
+  margin-top: 24px;
+}
+.p-dialog .p-btn-cancel-wrapper {
+  margin-top: 32px;
+}
+
+/*  ==============================
+* 予約受け付けダイアログ
+============================== */
+.p-dialog-gotcha[open] {
+  width: 90vw;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 2000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.p-dialog-gotcha__close {
+  background-color: #6f4a2a;
+  color: #ebebeb;
+  font-weight: bold;
+  padding: 8px 16px;
+  width: 160px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/*  ==============================
 * タイトル
 ============================== */
 .p-news-header {
