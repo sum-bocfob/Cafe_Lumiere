@@ -74,14 +74,14 @@
                     <form action="#" method="post" class="p-form">
                         <div class="p-form__area">
                             <label for="name" class="p-form__label">お名前<span class="c-form-required">※必須</span></label>
-                            <input type="text" name="name" id="name" class="p-form__input" placeholder="山田太郎" autofocus />
+                            <input type="text" name="name" id="name" class="p-form__input" placeholder="山田太郎" autofocus required />
                         </div>
                         <div class="p-form__area">
                             <div class="p-form__label p-form__label--tel">
                                 <label for="tel" class="">電話番号<span class="p-form__note">(ハイフンなしで入力してください)</span></label>
                                 <span class="c-form-required">※必須</span>
                             </div>
-                            <input type="tel" name="tel" id="tel" class="p-form__input" placeholder="例: 99999999999" />
+                            <input type="tel" name="tel" id="tel" class="p-form__input" placeholder="例: 99999999999" required />
                         </div>
                         <div class="p-form__area">
                             <label for="mail" class="p-form__label">メールアドレス</label>
@@ -94,7 +94,8 @@
 
                             <div class="p-form__select-area">
                                 <div class="p-form__select-wrapper">
-                                    <select name="num" id="num" class="p-form__select-sm">
+                                    <select name="num" id="num" class="p-form__select-sm" required>
+                                        <option value="" disabled selected>&nbsp;</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -201,7 +202,7 @@
                         </div>
 
                         <!-- * 確認ボタン ======================== -->
-                        <div class="p-btn-confirm-wrapper"><button type="button" class="c-btn c-btn--primary js-open-modal">予約内容の確認</button></div>
+                        <div class="p-btn-confirm-wrapper"><button type="submit" class="c-btn c-btn--primary js-open-modal">予約内容の確認</button></div>
                     </form>
 
                     <!-- * 確認ダイアログ ======================== -->

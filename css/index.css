@@ -424,4 +424,9 @@ textarea {
 fieldset,
 legend {
   display: contents;
+}
+
+input:user-invalid,
+select:user-invalid {
+  background-color: tomato;
 }/*# sourceMappingURL=index.css.map */

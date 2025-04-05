@@ -31,14 +31,28 @@ $(function () {
 
     // 月が変更されたら日数更新
     monthSelector.addEventListener("change", function () {
+        let tempDate = dateSelector.value;
         // 現在の月から日数追加
         const dayNum = new Date(date.getFullYear(), monthSelector.value, 0).getDate();
-        let options = [];
+        let days = [];
         for (i = 1; i <= dayNum; i++) {
-            options.push(`<option value="${i}">${i}</option>`);
+            days.push(`<option value="${i}">${i}</option>`);
         }
-        document.querySelector("#date").innerHTML = options;
+        document.querySelector("#date").innerHTML = days;
+        // 月の日数超えてたら
+        console.log(dayNum);
+        if (tempDate > dayNum) {
+            tempDate = dayNum;
+        }
+        dateSelector.value = tempDate;
     });
+
+    // 時間(営業終了1時間前まで)
+    let hours = [];
+    for (i = 11; i <= 20; i++) {
+        hours.push(`<option value="${i}">${i}</option>`);
+    }
+    document.querySelector("#hour").innerHTML = hours;
 });
 
 // 監視
@@ -70,9 +84,29 @@ elms.forEach((elm) => {
 // *予約確認モーダル ////////////////////////////////////////////////
 const openBtn = document.querySelector(".js-open-modal");
 const dialog = document.querySelector(".p-dialog");
+const form = document.querySelector(".p-form");
+const header = document.querySelector(".l-header");
+// !必須項目埋めてボタン押すと#に移動して舞う
 openBtn.addEventListener("click", function () {
-    inputToDialog();
-    dialog.showModal();
+    const firstInvalid = form.querySelector(":invalid");
+
+    if (firstInvalid) {
+        // スクロール補正（ヘッダーの高さ分）
+        const headerOffset = header.offsetHeight + 10;
+        const y = firstInvalid.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+        // 少し遅らせてスクロール
+        setTimeout(() => {
+            window.scrollTo({
+                top: y,
+                behavior: "smooth",
+            });
+        }, 1); // スクロール完了後に少し遅らせると安心
+    } else {
+        console.log("ga");
+        inputToDialog();
+        dialog.showModal();
+    }
 });
 
 // 予約確定

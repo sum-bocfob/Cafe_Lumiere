@@ -427,6 +427,11 @@ legend {
   display: contents;
 }
 
+input:user-invalid,
+select:user-invalid {
+  background-color: tomato;
+}
+
 .l-containerL {
   width: 100%;
   max-width: 1332px;
@@ -1077,6 +1082,7 @@ legend {
   height: 24px;
   flex-shrink: 0;
   flex-grow: 0;
+  margin-left: 8px;
   font-size: 0.875rem;
   font-weight: normal;
 }
