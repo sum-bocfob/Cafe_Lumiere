@@ -556,11 +556,16 @@ select:user-invalid {
   width: 4px;
   height: 4px;
   bottom: 50%;
+  left: -10px;
   translate: 0 50%;
-  left: max(-1.5vw, -1em);
   rotate: 45deg;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+@media screen and (width > 768px) {
+  .l-header__item::before {
+    left: max(-1.5vw, -1em);
+  }
 }
 .l-header__item::after {
   left: max(-1.5vw, -1em);
@@ -1180,6 +1185,7 @@ select:user-invalid {
   position: relative;
   margin: 0 auto;
   margin-top: 16px;
+  transition-duration: 0.6s;
 }
 @media screen and (width > 768px) {
   .top .p-reserve__cta {
@@ -1187,6 +1193,9 @@ select:user-invalid {
     max-width: 960px;
     margin-top: 60px;
   }
+}
+.top .p-reserve__cta:hover {
+  opacity: 0.6;
 }
 .top .p-reserve .c-round-btn-wrapper {
   position: absolute;
@@ -1425,34 +1434,57 @@ select:user-invalid {
   border-radius: 8px;
 }
 
-/*  ==============================
-* タイトル
-============================== */
-.p-news-header {
+.blog .p-blog {
+  /*  ==============================
+  * タイトル
+  ============================== */
+}
+.blog .p-blog .p-news-header {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-top: 32px;
 }
 @media screen and (width > 768px) {
-  .p-news-header {
+  .blog .p-blog .p-news-header {
     flex-direction: row;
     gap: 32px;
     align-items: center;
+    margin-top: 60px;
   }
 }
-.p-news-header .c-news-item__header {
+.blog .p-blog .p-news-header .c-news-item__header {
   display: flex;
   gap: 10px;
 }
 @media screen and (width > 768px) {
-  .p-news-header .c-news-item__header {
+  .blog .p-blog .p-news-header .c-news-item__header {
     gap: 16px;
   }
 }
-.p-news-header .c-news-item__title {
+.blog .p-blog .p-news-header .c-news-item__title {
   font-size: 1.25rem;
   font-weight: bold;
   line-height: 1;
+}
+.blog .p-blog__img-wrapper {
+  margin-top: 16px;
+}
+@media screen and (width > 768px) {
+  .blog .p-blog__img-wrapper {
+    margin-top: 60px;
+  }
+}
+.blog .p-blog__text {
+  margin-top: 48px;
+}
+.blog .p-blog .c-pagination-prev-next {
+  margin-top: 80px;
+}
+@media screen and (width > 768px) {
+  .blog .p-blog .c-pagination-prev-next {
+    margin-top: 60px;
+  }
 }
 
 .menu .p-menu__list {

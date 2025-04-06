@@ -73,11 +73,14 @@
             width: 4px;
             height: 4px;
             bottom: 50%;
+            left: -10px;
             translate: 0 50%;
-            left: max(-1.5vw, -1em);
             rotate: 45deg;
             transition-duration: $dur_header1;
             transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+            @include media {
+                left: max(-1.5vw, -1em);
+            }
         }
         &::after {
             left: max(-1.5vw, -1em);

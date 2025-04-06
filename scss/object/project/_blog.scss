@@ -1,29 +1,53 @@
 @use "../../global" as *;
 
-/*  ==============================
+.blog {
+    .p-blog {
+        /*  ==============================
 * タイトル
 ============================== */
-.p-news-header {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    @include media {
-        flex-direction: row;
-        gap: 32px;
-        align-items: center;
-    }
+        .p-news-header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 32px;
+            @include media {
+                flex-direction: row;
+                gap: 32px;
+                align-items: center;
+                margin-top: 60px;
+            }
 
-    .c-news-item__header {
-        display: flex;
-        gap: 10px;
-        @include media {
-            gap: 16px;
+            .c-news-item__header {
+                display: flex;
+                gap: 10px;
+                @include media {
+                    gap: 16px;
+                }
+            }
+
+            .c-news-item__title {
+                @include rem(20);
+                font-weight: bold;
+                line-height: 1;
+            }
         }
-    }
 
-    .c-news-item__title {
-        @include rem(20);
-        font-weight: bold;
-        line-height: 1;
+        &__img-wrapper {
+            margin-top: 16px;
+            @include media {
+                margin-top: 60px;
+            }
+        }
+
+        &__text {
+            margin-top: 48px;
+        }
+
+        .c-pagination-prev-next {
+            margin-top: 80px;
+            @include media {
+                margin-top: 60px;
+            }
+        }
     }
 }
