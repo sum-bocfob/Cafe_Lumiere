@@ -8,6 +8,7 @@ $(function () {
     });
     gnav.on("click", function () {
         $(this).removeClass("is-open");
+        menu.removeClass("is-open");
     });
 
     // 現在の月を設定
