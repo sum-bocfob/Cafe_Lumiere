@@ -44,9 +44,9 @@
     display: grid;
     place-content: center;
     background-color: $c_bg2;
-    @include rem(16);
+    @include rem(14);
     letter-spacing: 0.1em;
-    padding: 12px 42px;
+    padding: 12px 36px;
     border-radius: 100px;
     box-shadow: 0 3px 0 0 $c_shadow;
     color: $c_main2;
@@ -70,7 +70,7 @@
     line-height: 1;
     font-weight: normal;
     transition-duration: $dur_def;
-    @include rem(20);
+    @include rem(16);
     @include media {
         @include rem(24);
         padding: 16px 32px;

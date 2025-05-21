@@ -857,7 +857,7 @@ select:user-invalid {
   display: grid;
   place-content: center;
   background-color: #ecdfc6;
-  font-size: 0.875rem;
+  font-size: 1rem;
   letter-spacing: 0.1em;
   padding: 12px 36px;
   border-radius: 100px;
@@ -885,7 +885,7 @@ select:user-invalid {
   line-height: 1;
   font-weight: normal;
   transition-duration: 0.6s;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 @media screen and (width > 768px) {
   .c-btn {
